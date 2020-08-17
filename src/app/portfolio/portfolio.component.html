@@ -1,1 +1,13 @@
-<p>portfolio works!</p>
+<section class="services">
+    <div class="section-title">
+        <h4>portfolio</h4>
+        <div></div>
+      </div>
+    <div *ngFor="let item of portfolio;">
+          <article class="portfolio">
+            <a href="https://github.com/open-learning-exchange/planet"><img [src]="item.icon"></a>
+            <h6>{{item.title}}</h6>
+            <p>{{item.info}}</p>
+          </article>
+    </div>
+  </section>
