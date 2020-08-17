@@ -5,9 +5,12 @@
       </div>
     <div *ngFor="let item of portfolio;">
           <article class="portfolio">
-            <a href="https://github.com/open-learning-exchange/planet"><img [src]="item.icon"></a>
-            <h6>{{item.title}}</h6>
-            <p>{{item.info}}</p>
+            <a [href]="item.url">
+              <img [src]="item.icon">
+              <h6>{{item.title}}</h6>
+              <p>{{item.info}}</p>
+              <br>
+            </a>
           </article>
     </div>
   </section>
