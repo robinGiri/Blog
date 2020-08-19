@@ -1,26 +1,42 @@
  .footer {
     background: #2e2e2e ;
     color: var(--mainWhite);
-    padding: 2rem 1rem;
+    padding: .5rem 0;
     letter-spacing: var(--mainSpacing);
  }
 
  .footer .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 1.7rem auto;
+    margin: .5rem 0;
+
     grid-gap: 1rem;
   }
+
+  .container div:not(:first-child):not(:last-child) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+  .container div:last-child {
+    text-align: right;
+}
 
  .footer h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
+  .footer img {
+    border-radius: 50%;
+  }
 
  .footer a > i {
     color: #555;
-    margin-right: 0.5;
+    margin-right: 0.5rem;
  }
+
  @media screen and (min-width: 576px) {
     .footer .container {
       padding: 2rem 3rem;
