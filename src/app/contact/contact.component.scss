@@ -47,12 +47,16 @@
     width: 100%;
     padding-top: 15px;
     border-radius: 10px;
-    color: var(--offWhite);
+    color: #2e2e2e;
 }
 
 .button {
     width: 100%;
     padding: .7rem;
     border-radius: 10px;
-    color: var(--offWhite);
+    color: #2e2e2e;
+}
+
+.invalid-feedback {
+    color: red;
 }
