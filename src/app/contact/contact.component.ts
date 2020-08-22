@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit {
     this.editForm = this.fb.group({
       name: [ '', this.required],
       subject: [ '',  this.required] ,
-      email: [ '', this.required],
+      email: [ '', [this.required, this.emailValidation]],
       message: [ '', this.required],
     });
   }
@@ -44,6 +44,10 @@ export class ContactComponent implements OnInit {
 
   required(ac: AbstractControl) {
     return /\S/.test(ac.value) ? null : { 'required': true };
+  }
+
+  emailValidation(ac: AbstractControl) {
+    return /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/.test(ac.value) ? null : { 'inValidEmail': true };
   }
 
 }

@@ -3,26 +3,25 @@
         <div></div>
         <form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="contact-form">
 
-            <label for="name">Name</label>
-            <input class="input-field" type="text" name="name" formControlName="name">
+            <input class="input-field" type="text" name="name" formControlName="name" placeholder="Your name..">
             <span class="invalid-feedback" *ngIf="(editForm.get('name').touched || editForm.get('name').dirty) && editForm.get('name').invalid">
                 Name is required
             </span>
 
-            <label>Subject</label>
-            <input class="input-field" type="text" name="subject" formControlName="subject">
+            <input class="input-field" type="text" name="subject" formControlName="subject" placeholder="Enter Subject..">
             <span class="invalid-feedback" *ngIf="(editForm.get('subject').touched || editForm.get('subject').dirty) && editForm.get('subject').invalid">
                 Subject is required
             </span>
 
-            <label for="email">E-mail</label>
-            <input class="input-field" type="email" name="email" id="email" formControlName="email">
-            <span class="invalid-feedback" *ngIf="(editForm.get('email').touched || editForm.get('email').dirty) && editForm.get('email').invalid">
+            <input class="input-field" type="email" name="email" id="email" formControlName="email" placeholder="Your E-mail..">
+            <span class="invalid-feedback" *ngIf="(editForm.get('email').touched || editForm.get('email').dirty) && editForm.get('email').errors?.required">
                 E-mail is required
             </span>
+            <span class="invalid-feedback" *ngIf="(editForm.get('email').touched || editForm.get('email').dirty) && editForm.get('email').errors?.inValidEmail">
+                Email must be a valid email address
+            </span>
 
-            <label for="message">Message</label>
-            <textarea class="input-field" name="message" id="message" formControlName="message"></textarea>
+            <textarea class="input-field" name="message" id="message" formControlName="message" placeholder="Your message.."></textarea>
             <span class="invalid-feedback" *ngIf="(editForm.get('message').touched || editForm.get('message').dirty) && editForm.get('message').invalid">
                 Message is required
             </span>
