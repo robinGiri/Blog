@@ -1,0 +1,36 @@
+#blog{
+  background-image:url('../../assets/img/blog.jpg');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+#blog h1{
+  font-size:50px;
+  line-height:1.2;
+}
+
+#blog p{
+  font-size:20px;
+}
+
+#blog .btn{
+  font-size:18px;
+  text-decoration:none;
+  color:#2e2e2e;
+  border:#926239 1px solid;
+  padding:10px 20px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+#blog .btn:hover{
+  background: var(--primaryColor);
+  color:#fff;
+}
