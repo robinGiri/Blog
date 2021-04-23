@@ -1,5 +1,4 @@
 # About website
-This website is hosted in [robingiri.ml](https://robingiri.ml)
 
 
 # Dev
